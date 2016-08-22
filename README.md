@@ -24,3 +24,19 @@ Exists while at least one Android component is bounded to it by calling bindServ
 ```
 int onStartCommand(Intent intent, int flags, int startId)
 ```
+######Service in a separate process
+service tag
+```
+```
+######Broadcast receiver concurrent issues  
+The broadcast receivers are defined statically in the application manifest or dynamically via the
+```
+Context.registerReceiver().
+```
+
+#####Chapter 2. Performing Work with Looper, Handler
+######Understanding Looper
+access to the main thread's Looper instance
+```
+Looper mainLooper = Looper.getMainLooper();
+```
