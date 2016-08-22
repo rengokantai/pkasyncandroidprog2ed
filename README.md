@@ -7,3 +7,20 @@ keeping the main thread available to process any event coming from...
 The simultaneous execution of separate code paths that potentially interact with each other is known as concurrency.  
 The simultaneous execution of subunits of work in parallel to complete one unit of work is known as parallelism.  
 ######Android thread model
+
+######Concurrent package constructs
+Thread Pools
+```
+Executors.newCachedThreadPool()
+Executors.newFixedThreadPool (nThreads)
+Executors.newSingleThreadPool():
+```
+######Service concurrent issues
+- Started services  
+Service that is started by startService() that can run definitively even if the component that started it was destroyed.
+- Bound services  
+Exists while at least one Android component is bounded to it by calling bindService()
+######Started services issues
+```
+int onStartCommand(Intent intent, int flags, int startId)
+```
